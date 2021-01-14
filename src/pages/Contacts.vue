@@ -1,10 +1,7 @@
 <template>
   <q-page>
     <div class="row items-center justify-evenly">
-      <img src="~/src/assets/beni-og.jpg" alt="Beni" style="padding: 30px"/>
-    </div>
-    <div class="row items-center justify-evenly">
-      <h1>Welcome to my CV</h1>
+      <h1>Contacts</h1>
     </div>
   </q-page>
 </template>
