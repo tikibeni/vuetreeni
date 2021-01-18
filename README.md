@@ -1,6 +1,6 @@
-# vuetreeni (vuetreeni)
+# Vuetreeni
 
-vuetreeni
+Vue.js:n harjoittelua portfoliosivuston merkeissä
 
 ## Install the dependencies
 ```bash
