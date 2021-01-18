@@ -1,7 +1,6 @@
 # Vuetreeni
 
-Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#/)
-) merkeissä
+Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#/) merkeissä
 
 ## Install the dependencies
 ```bash
