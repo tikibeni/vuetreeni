@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          Vueharkka
+          <ToolbarButton button-name="CV" link-to="/" />
         </q-toolbar-title>
         <ToolbarButton button-name="Yhteystiedot" link-to="/contacts" />
       </q-toolbar>
@@ -22,6 +22,9 @@ import ToolbarButton from 'components/ToolbarButton.vue'
   components: { ToolbarButton }
 })
 export default class MainLayout extends Vue {
-  // Tätä ei voi jättää tyhjäksi
+  // Initializes created component with dark mode
+  created () {
+    this.$q.dark.set(true)
+  }
 }
 </script>

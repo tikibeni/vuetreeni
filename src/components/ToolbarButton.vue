@@ -10,7 +10,7 @@ import Component from 'vue-class-component'
 import { Prop } from 'vue-property-decorator'
 
 @Component({
-  // TODO
+  // --
 })
 
 export default class ToolbarButton extends Vue {
@@ -21,7 +21,7 @@ export default class ToolbarButton extends Vue {
   linkTo!: string
 
   buttonPressed () {
-    if (this.$router.currentRoute.fullPath !== '/contacts') {
+    if (this.$router.currentRoute.fullPath !== this.linkTo) {
       this.$router.push(this.linkTo)
     }
   }
