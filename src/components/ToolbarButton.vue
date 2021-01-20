@@ -1,6 +1,8 @@
 <template>
 <div>
-  <q-btn flat color="white" :label="ButtonName" @click="buttonPressed" />
+  <q-btn flat @click="buttonPressed" class="hl-color-1">
+    {{ ButtonName }}
+  </q-btn>
 </div>
 </template>
 

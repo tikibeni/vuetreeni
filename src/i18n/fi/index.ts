@@ -1,9 +1,9 @@
-// The language package in english
+// The language package in finnish.
 export default {
-  lang: 'Suomi',
-  contacts: 'Contacts',
-  profile: 'Profile',
-  experience: 'Work experience',
+  lang: 'English',
+  contacts: 'Yhteystiedot',
+  profile: 'Profiili',
+  experience: 'Työkokemus',
   experience_info: [
     {
       workplace: 'Erimover',
@@ -30,37 +30,37 @@ export default {
       icon: 'surfing'
     }
   ],
-  skills: 'Skills',
+  skills: 'Taidot',
   skills_info: [
     {
-      key: 'enJava',
+      key: 'fiJava',
       name: 'Java',
       grade: 4,
-      description: 'english info here'
+      description: 'Yliopiston pääasiallisena ohjelmointikielenä toimii Java. Tämän takia se on parhaiten hallitsemani ohjelmointikieli.'
     },
     {
-      key: 'enReactNode',
+      key: 'fiReactNode',
       name: 'React.js + Node.js',
       grade: 3,
-      description: 'english info here'
+      description: 'Yliopiston Fullstack-kurssilla opetellut perusteita useiden tehtäväsovellusten tekemisen yhteydessä.'
     },
     {
-      key: 'enVue',
+      key: 'fiVue',
       name: 'Vue.js',
       grade: 2,
-      description: 'english info here'
+      description: 'Opetellut Vuen alkeita tämän portfolion teon yhteydessä.'
     },
     {
-      key: 'enPython',
+      key: 'fiPython',
       name: 'Python',
       grade: 2,
-      description: 'english info here'
+      description: 'Olen käyttänyt Pythonia eräässä harjoitustyössä. Perusjutut hallussa.'
     },
     {
-      key: 'enSQL',
+      key: 'fiSQL',
       name: 'SQL',
       grade: 1,
-      description: 'english info here'
+      description: 'Yliopistolla opetellut SQL-alkeita sekä käyttänyt PostgreSQL:ää eräässä harjoitustyössä.'
     },
   ]
 }

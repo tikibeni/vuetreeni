@@ -2,6 +2,14 @@
 
 Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#/) merkeissä
 
+Apua HTML/CSS-suunnitteluun:
+
+- freefrontend
+- codepen
+- fontawesome tai google fonts
+- iconeille material.io (jo importattu projektiin)
+- [värimaailma](https://visme.co/blog/website-color-schemes/)
+
 ## Install the dependencies
 ```bash
 npm install

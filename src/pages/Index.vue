@@ -1,53 +1,60 @@
 <template>
   <q-page class="pageContainer">
-    <div class="leftContainer">
-      <q-avatar size="100px">
-        <img src="~/src/assets/beni-og.jpg" alt="Beni"/>
+    <div class="leftContainer bg-color-2">
+      <q-avatar class="dropShadow avatarImage" size="155px" square>
+        <img src="~/src/assets/avatar-cropped.jpg" alt="Beni"/>
       </q-avatar>
-      <h4>Taidot</h4>
-
-      <div>
-        <SkillBar skill-name="Java" skill-level="5" />
-        <SkillBar skill-name="Python" skill-level="2" />
-        sliderit ei toimi nätisti
-      </div>
-
-
+      <IconText size="30" icon="graduation-cap" class="hl-color-1" style="margin-top: 25px; margin-bottom: 25px;"> {{ $t('skills') }} </IconText>
+      <SkillBar v-for="skill in skill_list" :key="skill.key" :skill-name="skill.name" :skill-level="skill.grade"> {{ skill.description }} </SkillBar>
     </div>
 
-    <div class="rightContainer">
+    <div class="rightContainer bg-color-1" style="padding-left: 40px;">
       <div class="q-pa-lg">
-        <h3>Benjamin Blinnikka</h3>
+        <IconText style="padding-bottom: 45px" size="30" icon="user" class="hl-color-1">{{ $t('profile') }}</IconText>
+        <div class="tx-color-1">
+          <p>TODO:</p>
+          <ul>
+            <li>Korjaa uudelleenrenderöintiongelma localizationiin liittyen</li>
+            <li>Rakenna infot työkokemuksiin</li>
+            <li>Koulutusosio työkokemusten alapuolelle</li>
+            <li>Profiiliosion teksti</li>
+            <li>Yhteystiedot-sivulle sposti + iconlinkit someihin + github</li>
+            <li>Siistimpi fontti</li>
+            <li>CV-osion jälkeen Projects-tabi, jossa koodausprojektien esittelyä</li>
+          </ul>
+        </div>
       </div>
 
       <div class="q-pa-lg">
-        <h4>Profiili</h4>
-      </div>
-
-      <div class="q-pa-lg">
-        <q-timeline>
-          <q-timeline-entry heading>Työkokemus</q-timeline-entry>
-
-          <q-timeline-entry
-            title="Helsinki Surf Shop"
-            subtitle="February 22, 1986"
-            avatar="~/src/assets/surfing-24px.svg"
-            color="blue"
-          >
+        <q-timeline color="accent" style="position: relative;">
+          <IconText size="30" icon="book" class="hl-color-1" style="margin-bottom: 50px;">{{ $t('experience') }}</IconText>
+          <!-- The line of the timeLINE breaks due to the loop so it's built manually via backRectangle -->
+          <div class="backRectangle" />
+          <div v-for="work in experience_list">
             <div>
-              Kuvaus tänne.
+              <q-timeline-entry
+                :key="work.workplace"
+                :icon="work.icon"
+                style="margin-left: 10px;"
+              >
+                <template v-slot:subtitle>
+                  <div class="tx-color-2">
+                    {{ work.during }}
+                  </div>
+                </template>
+                <template v-slot:title>
+                  <div class="hl-color-1">
+                    {{ work.workplace }}
+                  </div>
+                </template>
+                <div>
+                  <div class="tx-color-1">
+                    {{ work.description }}
+                  </div>
+                </div>
+              </q-timeline-entry>
             </div>
-          </q-timeline-entry>
-
-          <q-timeline-entry
-            title="Event Title"
-            subtitle="February 21, 1986"
-            icon="delete"
-          >
-            <div>
-              Kuvaus tänne.
-            </div>
-          </q-timeline-entry>
+          </div>
         </q-timeline>
       </div>
     </div>
@@ -56,35 +63,65 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import SkillBar from "components/SkillBar.vue";
+import SkillBar from 'components/SkillBar.vue'
+import IconText from 'components/IconText.vue'
 
 @Component({
-  components: {SkillBar}
+  components: { SkillBar, IconText }
 })
 export default class PageIndex extends Vue {
-  name = 'Benjamin Blinnikka'
+  // Nämä pitää saada päivittymään kielenvaihdon yhteydessä.
+  // Nyt hakee vain kerran, eikä näin uudelleenrenderöi komponentteja.
+  skill_list = this.$t('skills_info')
+  experience_list = this.$t('experience_info')
+
+  /*
+  updateLanguage () {
+    this.skill_list = this.$t('skills_info')
+  }
+   */
 }
 </script>
 
 <style>
-.leftContainer {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  padding: 75px;
-  background-color: dimgrey;
-}
+  .avatarImage {
+    width: 140px;
+  }
 
-.rightContainer {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  background-color: #3c3f41;
-  flex-grow: 1
-}
+  .dropShadow {
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+  }
 
-.pageContainer {
-  display: flex;
-  flex-direction: row;
-}
+  .backRectangle {
+    position: absolute;
+    background-color: #404040;
+    width: 5px;
+    left: 5px;
+    height: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-grow: 1
+  }
+
+  .leftContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .pageContainer {
+    display: flex;
+    flex-direction: row;
+  }
 </style>

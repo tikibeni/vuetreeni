@@ -1,14 +1,23 @@
 <template>
-<div class="q-pa-md">
-  <q-badge :label="SkillName" />
-  <q-slider
-    :value="SkillLevel"
-    markers
-      :min="0"
-      :max="5"
-    readonly
-  />
-</div>
+  <div style="margin-bottom: 30px;">
+    <div class="row justify-center">
+      <div class="hl-color-1-light">
+        {{ SkillName }}
+      </div>
+    </div>
+    <div class="row justify-center">
+      <div v-for="number in SkillLevel">
+        <q-icon name="fas fa-star" class="q-px-xs hl-color-1" />
+      </div>
+      <div v-for="number in 5-SkillLevel">
+        <q-icon name="far fa-star" class="q-px-xs  hl-color-1-dark" />
+      </div>
+    </div>
+    <div style="text-align: center;" class="tx-color-2">
+      <slot>
+      </slot>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

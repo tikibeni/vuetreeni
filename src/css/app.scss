@@ -1,2 +1,51 @@
 // app global css in SCSS form
 
+// Toolbarin väriteema
+.toolbar-color {
+  background-color: $top-1;
+}
+
+// Taustaväriteema 1
+.bg-color-1 {
+  background-color: $bg-1;
+}
+
+// Taustaväriteema 2
+.bg-color-2 {
+  background-color: $bg-2;
+}
+
+// Korostusväri 1
+.hl-color-1 {
+  color: $hl-1;
+}
+
+// Korostusväri 1 tummempi
+.hl-color-1-dark {
+  color: $hl-1-dark;
+}
+
+// Korostusväri 1 vaaleampi
+.hl-color-1-light {
+  color: $hl-1-light;
+}
+
+// Korostusväri 2
+.hl-color-2 {
+  color: $hl-2;
+}
+
+// Korostusväri 3
+.hl-color-3 {
+  color: $hl-3;
+}
+
+// Leipätekstiväri 1
+.tx-color-1 {
+  color: $tx-1;
+}
+
+// Leipätekstiväri 2
+.tx-color-2 {
+  color: $tx-2;
+}
