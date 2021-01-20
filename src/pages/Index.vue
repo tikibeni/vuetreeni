@@ -2,15 +2,15 @@
   <q-page class="pageContainer">
     <div class="leftContainer bg-color-2">
       <q-avatar class="dropShadow avatarImage" size="155px" square>
-        <img src="~/src/assets/avatar-cropped.jpg" alt="Beni"/>
+        <img src="~/src/assets/avatar.jpg" alt="Beni"/>
       </q-avatar>
-      <IconText size="30" icon="graduation-cap" class="hl-color-1" style="margin-top: 25px; margin-bottom: 25px;"> {{ $t('skills') }} </IconText>
-      <SkillBar v-for="skill in skill_list" :key="skill.key" :skill-name="skill.name" :skill-level="skill.grade"> {{ skill.description }} </SkillBar>
+      <IconText icon="graduation-cap" class="hl-color-1" style="margin-top: 25px; margin-bottom: 25px; font-size:30px;"> {{ $t('skills') }} </IconText>
+      <SkillBar v-for="skill in skList" :key="skill.key" :skill-name="skill.name" :skill-level="skill.grade"> {{ skill.description }} </SkillBar>
     </div>
 
     <div class="rightContainer bg-color-1" style="padding-left: 40px;">
       <div class="q-pa-lg">
-        <IconText style="padding-bottom: 45px" size="30" icon="user" class="hl-color-1">{{ $t('profile') }}</IconText>
+        <IconText style="padding-bottom: 45px; font-size: 30px;"  icon="user" class="hl-color-1">{{ $t('profile') }}</IconText>
         <div class="tx-color-1">
           <p>TODO:</p>
           <ul>
@@ -27,13 +27,12 @@
 
       <div class="q-pa-lg">
         <q-timeline color="accent" style="position: relative;">
-          <IconText size="30" icon="book" class="hl-color-1" style="margin-bottom: 50px;">{{ $t('experience') }}</IconText>
+          <IconText icon="book" class="hl-color-1" style="margin-bottom: 50px; font-size: 30px;">{{ $t('experience') }}</IconText>
           <!-- The line of the timeLINE breaks due to the loop so it's built manually via backRectangle -->
           <div class="backRectangle" />
-          <div v-for="work in experience_list">
+          <div v-for="work in expList" v-bind:key="work.workplace">
             <div>
               <q-timeline-entry
-                :key="work.workplace"
                 :icon="work.icon"
                 style="margin-left: 10px;"
               >
@@ -72,8 +71,8 @@ import IconText from 'components/IconText.vue'
 export default class PageIndex extends Vue {
   // Nämä pitää saada päivittymään kielenvaihdon yhteydessä.
   // Nyt hakee vain kerran, eikä näin uudelleenrenderöi komponentteja.
-  skill_list = this.$t('skills_info')
-  experience_list = this.$t('experience_info')
+  skList = this.$t('skills_info')
+  expList = this.$t('experience_info')
 
   /*
   updateLanguage () {

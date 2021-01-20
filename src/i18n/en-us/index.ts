@@ -61,6 +61,6 @@ export default {
       name: 'SQL',
       grade: 1,
       description: 'english info here'
-    },
+    }
   ]
 }

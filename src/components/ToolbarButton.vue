@@ -24,6 +24,7 @@ export default class ToolbarButton extends Vue {
 
   buttonPressed () {
     if (this.$router.currentRoute.fullPath !== this.linkTo) {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       this.$router.push(this.linkTo)
     }
   }

@@ -61,6 +61,6 @@ export default {
       name: 'SQL',
       grade: 1,
       description: 'Yliopistolla opetellut SQL-alkeita sekä käyttänyt PostgreSQL:ää eräässä harjoitustyössä.'
-    },
+    }
   ]
 }

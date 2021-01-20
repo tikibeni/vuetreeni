@@ -1,7 +1,7 @@
 <template>
-  <div class="row q-mb-md" :style="'height: ' + size + 'px;'">
-    <q-icon :size="size + 'px'" :name="'fas fa-' + icon" style="top: 20%;" />
-    <div :style="'font-size: ' + size + 'px; margin-left: 15px;'">
+  <div class="row q-mb-md">
+    <q-icon :name="'fas fa-' + icon" style="top: 20%; margin-top: 5px;" />
+    <div :style="'margin-left: 15px;'">
       <slot>
         <!-- Content generated here upon calling -->
       </slot>
@@ -20,9 +20,6 @@ import { Prop } from 'vue-property-decorator'
 
 export default class IconText extends Vue {
   @Prop({ required: true })
-  size!: number
-
-  @Prop( { required: true })
   icon!: string
 }
 </script>
