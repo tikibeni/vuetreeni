@@ -3,6 +3,7 @@ export default {
   lang: 'English',
   contacts: 'Yhteystiedot',
   profile: 'Profiili',
+
   experience: 'Työkokemus',
   experience_info: [
     {
@@ -30,6 +31,7 @@ export default {
       icon: 'surfing'
     }
   ],
+
   skills: 'Taidot',
   skills_info: [
     {

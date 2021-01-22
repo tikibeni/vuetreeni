@@ -74,11 +74,11 @@ export default class PageIndex extends Vue {
   skList = this.$t('skills_info')
   expList = this.$t('experience_info')
 
-  /*
+
   updateLanguage () {
-    this.skill_list = this.$t('skills_info')
+    this.$emit('change-language')
   }
-   */
+
 }
 </script>
 

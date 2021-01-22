@@ -16,6 +16,7 @@
     </div>
     <div style="text-align: center;" class="tx-color-2">
       <slot>
+        <!-- Description of the skill renders here -->
       </slot>
     </div>
   </div>

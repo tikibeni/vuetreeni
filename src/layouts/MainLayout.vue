@@ -5,7 +5,7 @@
         <q-btn @click="changeLanguage()" class="hl-color-1"> {{ $t('lang') }} </q-btn>
         <div style="position: absolute; left: 50%; top: 4px; cursor: pointer;" @click="goToRoot()">
           <div class="scaleToScreen" style="position: relative; left: -50%;">
-            <IconText icon="mug-hot" class="hl-color-1" >Benjamin Blinnikka</IconText>
+            <IconText icon="mug-hot" class="hl-color-1">Benjamin Blinnikka</IconText>
           </div>
         </div>
         <q-space />
@@ -13,7 +13,7 @@
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <router-view />
+      <router-view v-on:update-language="console.log('KIELI MUUTTUI')" />
     </q-page-container>
   </q-layout>
 </template>
@@ -50,21 +50,30 @@ export default class MainLayout extends Vue {
     }
 
     // TODO LANGUAGE-CHANGE
+    // Ilmeisesti allaoleva emittaa tasan parentille.
     this.$emit('changelanguage')
   }
 }
 </script>
 
+<!-- Alla tekstin sovittaminen näyttöön. Noin 600px kohalla on Chromella ongelmaleveys -->
+<!-- Tarvitaan toinen breakpointti mobiilille. -->
 <style scoped>
-@media screen and (max-width: 600px) {
-  .scaleToScreen {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 605px) {
   .scaleToScreen {
     font-size: 30px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 605px) {
+  .scaleToScreen {
+    font-size: 20px;
+    top: 7px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .scaleToScreen {
+    font-size: 15px;
   }
 }
 </style>
