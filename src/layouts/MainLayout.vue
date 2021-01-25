@@ -13,13 +13,14 @@
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <router-view v-on:update-language="console.log('KIELI MUUTTUI')" />
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import ToolbarButton from 'components/ToolbarButton.vue'
 import IconText from 'components/IconText.vue'
 
@@ -42,16 +43,11 @@ export default class MainLayout extends Vue {
 
   // Handler for the language-button
   changeLanguage () {
-    console.log(this.$i18n.locale)
     if (this.$i18n.locale === 'en-us') {
       this.$i18n.locale = 'fi'
     } else {
       this.$i18n.locale = 'en-us'
     }
-
-    // TODO LANGUAGE-CHANGE
-    // Ilmeisesti allaoleva emittaa tasan parentille.
-    this.$emit('changelanguage')
   }
 }
 </script>
