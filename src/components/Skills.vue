@@ -39,8 +39,10 @@ export default class SkillBar extends Vue {
   skillsList = this.$t('skills_info')
 
   // TODO: The following implementation is absolutely bad
-  // Fix when I know how to use Vuex stores (localisation into store state)
+  // FIXME when I know how to use Vuex stores (localisation into store state)
+  // FIXME unbound-method lint
   mounted () {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     setInterval(this.updateLocalisation, 1000)
   }
 

@@ -45,8 +45,10 @@ export default class WorkExperiences extends Vue {
   experienceList = this.$t('experience_info')
 
   // TODO: The following implementation is very bad
-  // Fix with Vuex store
+  // FIXME with Vuex store
+  // FIXME Lint error about unbound method
   mounted () {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     setInterval(this.updateLocalisation, 1000)
   }
 
