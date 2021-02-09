@@ -4,15 +4,9 @@ Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#
 
 Todo:
 
-- Koulutusosio varustettuna lakki-iconilla
-- Skills-osioon uusi icon
-- Yhteystiedot-täbi kuntoon
-  - sposti
-  - iconit eri (some-, ja projekti-)kanaville
-
-- Hienompi fontti
-- Skaalautuva UI mobilelle flexboxeilla ja screenlistenereillä
 - Latausanimaatio sivun avaukseen + sulavat siirtymät täbien välillä
+- Skaalautuva UI mobilelle flexboxeilla ja screenlistenereillä
+- Hienompi fontti
 - Jatkokehityksenä Projects-täbi, johon esittelyä tehdyistä prokkiksista
 
 Apua HTML/CSS-suunnitteluun:
