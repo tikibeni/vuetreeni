@@ -1,33 +1,39 @@
-// The language package in finnish.
+// The language package in Finnish
 export default {
-  lang: 'English',
+  lang: 'EN',
   contacts: 'Yhteystiedot',
+
   profile: 'Profiili',
+  profile_info: ['Olen analyyttinen tiimipelaaja ja tulen hyvin toimeen ihmisten kanssa. Kehitän jatkuvasti itseäni oppijana periksiantamattomuudella, joka on kehittynyt usean vuoden kilpaurheilusta. ',
+    'Tällä hetkellä opiskelen tietojenkäsittelytiedettä Helsingin Yliopistossa, josta valmistun kandidaatiksi 2021 ja maisteriksi arviolta 2023. ',
+    'Minulla on paljon kokemusta asiakkaiden kanssa työskentelystä sekä itsenäisesti että osana tiimiä. Lisäksi minulla on pitkä urheilutausta, sillä olen harrastanut purjelautailua neljävuotiaasta lähtien. ',
+    'Nautin ongelmanratkaisusta ja syvällisestä pohtimisesta, mutta myös huumorista ja kahvista.'
+  ],
 
   experience: 'Työkokemus',
   experience_info: [
     {
       workplace: 'Erimover',
       during: 'Tammikuu 2019 alkaen',
-      description: 'infoa',
+      description: 'Olen työskennellyt Erimoverilla useissa asiakasrajapinnan tehtävissä. Työtehtäviini on kuulunut asiakaspalvelu muutamalla kuntosalilla, valvonta ja ohjaus aktiviteettipuistossa, sisälaine-, purje- sekä SUP-lautailun ohjaus sekä purjelautailupalveluiden kehittäminen. Kuukauden työntekijä 06/2020.',
       icon: 'accessibility_new'
     },
     {
       workplace: 'Helsingfors Segelsällskap',
       during: 'Kesäkausina 2019 ja 2020',
-      description: 'infoa',
+      description: 'Työskentelin muutamia vuoroja purjelautailuvalmentajana HSS:llä kesäkausina 2019 ja 2020. Työtehtäviini kuuluivat harjoitussessioiden suunnittelu ja toteutus purjelautaryhmille sekä valmennus alkeiskurssilla.',
       icon: 'sailing'
     },
     {
       workplace: 'Suomen Taitovoimisteluklubi',
       during: 'Tammikuu 2019',
-      description: 'infoa',
+      description: 'Apuohjaajana toimiminen voimisteluryhmälle.',
       icon: 'accessibility'
     },
     {
       workplace: 'Helsinki Surf Shop',
       during: 'Kesäkausina 2015, 2016 ja 2017',
-      description: 'infoa',
+      description: 'Työtehtäviini kuului asiakaspalvelu sekä myyntityö erityisesti purjelautailuvälineistöön liittyen.',
       icon: 'surfing'
     }
   ],
@@ -38,7 +44,7 @@ export default {
       key: 'fiJava',
       name: 'Java',
       grade: 4,
-      description: 'Yliopiston pääasiallisena ohjelmointikielenä toimii Java. Tämän takia se on parhaiten hallitsemani ohjelmointikieli.'
+      description: 'Yliopiston pääasiallisena ohjelmointikielenä toimii Java, jonka ansiosta se on parhaiten hallitsemani ohjelmointikieli.'
     },
     {
       key: 'fiReactNode',
@@ -56,13 +62,19 @@ export default {
       key: 'fiPython',
       name: 'Python',
       grade: 2,
-      description: 'Olen käyttänyt Pythonia eräässä harjoitustyössä. Perusjutut hallussa.'
+      description: 'Olen opetellut ja käyttänyt Pythonia eräässä tietokantaharjoitustyössä.'
     },
     {
       key: 'fiSQL',
       name: 'SQL',
-      grade: 1,
+      grade: 2,
       description: 'Yliopistolla opetellut SQL-alkeita sekä käyttänyt PostgreSQL:ää eräässä harjoitustyössä.'
     }
+  ],
+
+  education: 'Koulutus',
+  education_info: [
+    'Helsingin Yliopisto: Tietojenkäsittelytiede',
+    'Arvioidut vaiheet: LuK 2021, FM 2023'
   ]
 }

@@ -1,6 +1,6 @@
 <template>
   <div style="margin-bottom: 30px;">
-    <IconText icon="graduation-cap" class="hl-color-1 row justify-center" style="margin-top: 25px; margin-bottom: 25px; font-size:30px;"> {{ title }} </IconText>
+    <IconText icon="fas fa-cogs" class="hl-color-1 row justify-center" style="margin-top: 25px; margin-bottom: 25px; font-size:30px;"> {{ title }} </IconText>
     <div v-for="skill in skillsList" :key="skill.key">
       <div class="row justify-center" >
         <div class="hl-color-1-light">
@@ -28,28 +28,19 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import IconText from 'components/IconText.vue'
+import IconText from 'components/utils/IconText.vue'
+import { Prop } from 'vue-property-decorator'
 
 @Component({
   components: { IconText }
 })
 
-export default class SkillBar extends Vue {
-  title = this.$t('skills')
-  skillsList = this.$t('skills_info')
+export default class Skills extends Vue {
+  @Prop({ required: true })
+  skillsList!: Array<string>
 
-  // TODO: The following implementation is absolutely bad
-  // FIXME when I know how to use Vuex stores (localisation into store state)
-  // FIXME unbound-method lint
-  mounted () {
-    // eslint-disable-next-line @typescript-eslint/unbound-method
-    setInterval(this.updateLocalisation, 1000)
-  }
-
-  updateLocalisation () {
-    this.title = this.$t('skills')
-    this.skillsList = this.$t('skills_info')
-  }
+  @Prop({ required: true })
+  title!: string
 }
 </script>
 

@@ -2,10 +2,10 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="toolbar-color">
-        <q-btn @click="changeLanguage()" class="hl-color-1"> {{ $t('lang') }} </q-btn>
+        <q-btn flat @click="changeLanguage()" class="hl-color-1"> {{ $t('lang') }} </q-btn>
         <div style="position: absolute; left: 50%; top: 4px; cursor: pointer;" @click="goToRoot()">
           <div class="scaleToScreen" style="position: relative; left: -50%;">
-            <IconText icon="mug-hot" class="hl-color-1">Benjamin Blinnikka</IconText>
+            <IconText icon="fas fa-mug-hot" class="hl-color-1">Benjamin Blinnikka</IconText>
           </div>
         </div>
         <q-space />
@@ -13,7 +13,7 @@
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <router-view />
+        <router-view />
     </q-page-container>
   </q-layout>
 </template>
@@ -21,8 +21,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import ToolbarButton from 'components/ToolbarButton.vue'
-import IconText from 'components/IconText.vue'
+import ToolbarButton from 'components/utils/ToolbarButton.vue'
+import IconText from 'components/utils/IconText.vue'
 
 @Component({
   components: { ToolbarButton, IconText }
@@ -51,9 +51,6 @@ export default class MainLayout extends Vue {
   }
 }
 </script>
-
-<!-- Alla tekstin sovittaminen näyttöön. Noin 600px kohalla on Chromella ongelmaleveys -->
-<!-- Tarvitaan toinen breakpointti mobiilille. -->
 <style scoped>
 @media screen and (min-width: 605px) {
   .scaleToScreen {
