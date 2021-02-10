@@ -15,7 +15,7 @@
       enter-active-class="animated fadeIn anim-slow"
       >
       <!-- RIGHT COLUMN CONTAINER: Profile + Work + Education -->
-      <div class="rightContainer bg-color-1" style="padding-left: 40px;">
+      <div class="rightContainer bg-color-1" style="padding-left: 40px; padding-right: 40px;">
         <Profile :title="profileTitle" :info="profileInfo" key="profile"/>
         <WorkExperiences :experience-list="experienceList" :title="experienceTitle" key="work"/>
         <Education :title="educationTitle" :description="educationInfo" key="education"/>
