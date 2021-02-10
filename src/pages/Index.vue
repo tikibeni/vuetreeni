@@ -1,16 +1,26 @@
 <template>
   <q-page class="pageContainer">
-    <!-- LEFT COLUMN CONTAINER: Avatar + Skills -->
-    <div class="leftContainer bg-color-2" >
-      <Avatar />
-      <Skills :skills-list="skillsList" :title="skillTitle"/>
-    </div>
-    <!-- RIGHT COLUMN CONTAINER: Profile + Work (+ Education) -->
-    <div class="rightContainer bg-color-1" style="padding-left: 40px;">
-      <Profile :title="profileTitle" :info="profileInfo"/>
-      <WorkExperiences :experience-list="experienceList" :title="experienceTitle"/>
-      <Education :title="educationTitle" :description="educationInfo" />
-    </div>
+    <transition
+      appear
+      enter-active-class="animated fadeIn"
+      >
+      <!-- LEFT COLUMN CONTAINER: Avatar + Skills -->
+      <div class="leftContainer bg-color-2" >
+        <Avatar />
+        <Skills :skills-list="skillsList" :title="skillTitle"/>
+      </div>
+    </transition>
+    <transition
+      appear
+      enter-active-class="animated fadeIn anim-slow"
+      >
+      <!-- RIGHT COLUMN CONTAINER: Profile + Work + Education -->
+      <div class="rightContainer bg-color-1" style="padding-left: 40px;">
+        <Profile :title="profileTitle" :info="profileInfo" key="profile"/>
+        <WorkExperiences :experience-list="experienceList" :title="experienceTitle" key="work"/>
+        <Education :title="educationTitle" :description="educationInfo" key="education"/>
+      </div>
+    </transition>
   </q-page>
 </template>
 
@@ -83,6 +93,6 @@ export default class PageIndex extends Vue {
   }
 
   .anim-slow {
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 1s;
   }
 </style>

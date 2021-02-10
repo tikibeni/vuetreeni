@@ -67,6 +67,12 @@ export default class MainLayout extends Vue {
 @media screen and (max-width: 470px) {
   .scaleToScreen {
     font-size: 15px;
+    top: 9px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .scaleToScreen {
+    margin-right: 25px;
   }
 }
 </style>
