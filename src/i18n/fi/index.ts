@@ -5,8 +5,8 @@ export default {
 
   profile: 'Profiili',
   profile_info: ['Olen analyyttinen tiimipelaaja ja tulen hyvin toimeen ihmisten kanssa. Kehitän jatkuvasti itseäni oppijana periksiantamattomuudella, joka on kehittynyt usean vuoden kilpaurheilusta. ',
-    'Tällä hetkellä opiskelen tietojenkäsittelytiedettä Helsingin Yliopistossa, josta valmistun kandidaatiksi 2021 ja maisteriksi arviolta 2023. ',
     'Minulla on paljon kokemusta asiakkaiden kanssa työskentelystä sekä itsenäisesti että osana tiimiä. Lisäksi minulla on pitkä urheilutausta, sillä olen harrastanut purjelautailua neljävuotiaasta lähtien. ',
+    'Tällä hetkellä opiskelen tietojenkäsittelytiedettä Helsingin Yliopistossa, josta valmistun kandidaatiksi 2021 ja maisteriksi arviolta 2023. ',
     'Nautin ongelmanratkaisusta ja syvällisestä pohtimisesta, mutta myös huumorista ja kahvista.'
   ],
 

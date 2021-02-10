@@ -5,8 +5,8 @@ export default {
 
   profile: 'Profile',
   profile_info: ['I´m an analytic team player and I enjoy working with people. I continuously develop myself as a learner with perseverance, which I´ve developed during my many years of competitive windsurfing. ',
-    'At the moment I`m studying computer science at the University of Helsinki which from I will graduate as a B.Sc. by 2021 and M.Sc. by 2023. ',
     'I have a lot of experience about working with customers both independently and as a part of a team. In addition I have a long background in the field of sports as I`ve done windsurfing since I was 4 years old. ',
+    'At the moment I`m studying computer science at the University of Helsinki which from I will graduate as a B.Sc. by 2021 and M.Sc. by 2023. ',
     'I enjoy problem solving and deep thinking as well as humour and coffee.'
   ],
 

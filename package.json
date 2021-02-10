@@ -1,8 +1,8 @@
 {
-  "name": "vuetreeni",
-  "version": "0.0.1",
-  "description": "vuetreeni",
-  "productName": "vuetreeni",
+  "name": "benin-portfolio",
+  "version": "1.0.0",
+  "description": "Vuen harjoittelua portfolioprojektina",
+  "productName": "Benjamin Blinnikka",
   "author": "Benjamin Blinnikka <benjamin.blinnikka@hotmail.com>",
   "private": true,
   "scripts": {

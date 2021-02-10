@@ -2,25 +2,30 @@
   <div style="margin-bottom: 30px;">
     <IconText icon="fas fa-cogs" class="hl-color-1 row justify-center" style="margin-top: 25px; margin-bottom: 25px; font-size:30px;"> {{ title }} </IconText>
     <div v-for="skill in skillsList" :key="skill.key">
-      <div class="row justify-center" >
-        <div class="hl-color-1-light">
-          {{ skill.name }}
+      <transition-group
+        appear
+        enter-active-class="animated fadeInUp"
+      >
+        <div key="title" class="row justify-center" >
+          <div class="hl-color-1-light">
+            {{ skill.name }}
+          </div>
         </div>
-      </div>
-      <div class="row justify-center">
-        <!-- Consider fixing the keys below if necessary. Works for the time being -->
-        <div v-for="number in skill.grade" v-bind:key="skill.grade + number">
-          <q-icon name="fas fa-star" class="q-px-xs hl-color-1" />
+        <div key="stars" class="row justify-center">
+          <!-- Consider fixing the keys below if necessary. Works for the time being -->
+          <div v-for="number in skill.grade" v-bind:key="skill.grade + number">
+            <q-icon name="fas fa-star" class="q-px-xs hl-color-1" />
+          </div>
+          <div v-for="number in 5-skill.grade" v-bind:key="number + skill.name">
+            <q-icon name="far fa-star" class="q-px-xs  hl-color-1-dark" />
+          </div>
         </div>
-        <div v-for="number in 5-skill.grade" v-bind:key="number + skill.name">
-          <q-icon name="far fa-star" class="q-px-xs  hl-color-1-dark" />
+        <div key="description" style="text-align: center; margin-bottom: 25px;" class="tx-color-2">
+          <slot>
+            {{ skill.description }}
+          </slot>
         </div>
-      </div>
-      <div style="text-align: center; margin-bottom: 25px;" class="tx-color-2">
-        <slot>
-          {{ skill.description }}
-        </slot>
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>
