@@ -4,9 +4,7 @@ Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#
 
 Todo:
 
-- Latausanimaatio sivun avaukseen + sulavat siirtymät täbien välillä
-- Skaalautuva UI mobilelle flexboxeilla ja screenlistenereillä
-- Hienompi fontti
+- Hienompi fontti?
 - Jatkokehityksenä Projects-täbi, johon esittelyä tehdyistä prokkiksista
 
 Apua HTML/CSS-suunnitteluun:

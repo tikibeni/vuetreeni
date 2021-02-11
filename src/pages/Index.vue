@@ -10,6 +10,7 @@
         <Skills :skills-list="skillsList" :title="skillTitle"/>
       </div>
     </transition>
+
     <transition
       appear
       enter-active-class="animated fadeIn anim-slow"
@@ -90,6 +91,22 @@ export default class PageIndex extends Vue {
   .pageContainer {
     display: flex;
     flex-direction: row;
+  }
+
+  @media screen and (max-width: 700px) {
+    .pageContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .leftContainer {
+      display: flex;
+      flex-direction: column;
+      max-width: 700px;
+      justify-content: flex-start;
+    }
   }
 
   .anim-slow {

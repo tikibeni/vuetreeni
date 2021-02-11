@@ -2,7 +2,7 @@
   <div class="q-pa-lg">
     <IconText style="padding-bottom: 20px; font-size: 30px;" icon="fas fa-user" class="hl-color-1">{{ title }}</IconText>
     <q-card v-for="i in info" :key="i.key" >
-      <q-card-section style="font-size: 20px;" class="tx-color-1">
+      <q-card-section class="tx-color-1 scaleToScreen">
         {{ i }}
       </q-card-section>
     </q-card>
@@ -29,5 +29,17 @@ export default class Profile extends Vue {
 </script>
 
 <style scoped>
+
+@media screen and (max-width: 770px) {
+  .scaleToScreen {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .scaleToScreen {
+    font-size: 20px;
+  }
+}
 
 </style>
