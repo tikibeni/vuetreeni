@@ -1,7 +1,7 @@
 // The language package in Finnish
 export default {
   lang: 'EN',
-  contacts: 'Yhteystiedot',
+  contacts: 'Info',
 
   profile: 'Profiili',
   profile_info: ['Olen analyyttinen tiimipelaaja ja tulen hyvin toimeen ihmisten kanssa. Kehitän jatkuvasti itseäni oppijana periksiantamattomuudella, joka on kehittynyt usean vuoden kilpaurheilusta. ',

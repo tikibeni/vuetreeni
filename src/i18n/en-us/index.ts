@@ -1,7 +1,7 @@
 // The language package in English
 export default {
   lang: 'FI',
-  contacts: 'Contacts',
+  contacts: 'Info',
 
   profile: 'Profile',
   profile_info: ['I´m an analytic team player and I enjoy working with people. I continuously develop myself as a learner with perseverance, which I´ve developed during my many years of competitive windsurfing. ',

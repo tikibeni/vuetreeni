@@ -2,7 +2,7 @@
   <div class="q-pa-lg">
     <IconText style="padding-bottom: 20px; font-size: 30px;" icon="fas fa-user" class="hl-color-1">{{ title }}</IconText>
     <q-card v-for="i in info" :key="i.key" >
-      <q-card-section class="tx-color-1 scaleToScreen">
+      <q-card-section class="tx-color-1 scaleToScreen" style="overflow-wrap: break-word;">
         {{ i }}
       </q-card-section>
     </q-card>

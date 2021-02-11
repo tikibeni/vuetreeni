@@ -10,6 +10,9 @@
             color="green"
             style="margin-left: 10px;"
           >
+            <q-card>
+
+            </q-card>
             <template v-slot:subtitle>
               <div class="tx-color-2">
                 {{ work.during }}
