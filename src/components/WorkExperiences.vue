@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md">
     <q-timeline color="accent" style="position: relative;">
-      <IconText icon="fas fa-book" class="hl-color-1" style="margin-bottom: 40px; font-size: 30px;">{{ title }}</IconText>
+      <IconText icon="fas fa-book" class="hl-color-1 scaleTitleToScreen" style="margin-bottom: 40px;">{{ title }}</IconText>
       <div class="backRectangle" />
       <div v-for="work in experienceList" v-bind:key="work.workplace">
         <div>
@@ -10,9 +10,6 @@
             color="green"
             style="margin-left: 10px;"
           >
-            <q-card>
-
-            </q-card>
             <template v-slot:subtitle>
               <div class="tx-color-2">
                 {{ work.during }}
@@ -24,7 +21,7 @@
               </div>
             </template>
             <div>
-              <div class="tx-color-1" style="font-size: 16px;">
+              <div class="tx-color-1 scaleTextToScreen">
                 {{ work.description }}
               </div>
             </div>
@@ -64,6 +61,30 @@ export default class WorkExperiences extends Vue {
   height: 80%;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 380px) {
+  .scaleTextToScreen{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .scaleTextToScreen {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scaleTitleToScreen {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .scaleTitleToScreen {
+    font-size: 30px;
+  }
 }
 
 </style>

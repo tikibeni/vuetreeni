@@ -2,7 +2,7 @@
   <div class="q-pa-lg">
     <IconText style="padding-bottom: 20px; font-size: 30px;" icon="fas fa-user" class="hl-color-1">{{ title }}</IconText>
     <q-card v-for="i in info" :key="i.key" >
-      <q-card-section class="tx-color-1 scaleToScreen" style="overflow-wrap: break-word;">
+      <q-card-section class="tx-color-1 scaleToScreen scalableContent" lang="en">
         {{ i }}
       </q-card-section>
     </q-card>
@@ -40,6 +40,20 @@ export default class Profile extends Vue {
   .scaleToScreen {
     font-size: 20px;
   }
+}
+
+@media screen and (max-width: 380px) {
+  .scaleToScreen {
+    font-size: 14px;
+  }
+}
+
+.scalableContent {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 </style>
