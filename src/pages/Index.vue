@@ -12,8 +12,7 @@
     </transition>
     <transition
       appear
-      enter-active-class="animated fadeIn"
-      style="-webkit-animation-duration: 1s;"
+      enter-active-class="animated fadeIn slowerAnimation"
       >
       <!-- RIGHT COLUMN CONTAINER: Profile + Work + Education -->
       <div class="rightContainer bg-color-1" style="padding-left: 40px; padding-right: 40px;">
@@ -107,5 +106,9 @@ export default class PageIndex extends Vue {
       max-width: 700px;
       justify-content: flex-start;
     }
+  }
+
+  .slowerAnimation {
+    -webkit-animation-duration: 1s;
   }
 </style>
