@@ -4,7 +4,6 @@ Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#
 
 Todo:
 
-- Hienompi fontti?
 - Jatkokehityksenä Projects-täbi, johon esittelyä tehdyistä prokkiksista
 
 Apua HTML/CSS-suunnitteluun:

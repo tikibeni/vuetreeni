@@ -10,10 +10,10 @@
         <Skills :skills-list="skillsList" :title="skillTitle"/>
       </div>
     </transition>
-
     <transition
       appear
-      enter-active-class="animated fadeIn anim-slow"
+      enter-active-class="animated fadeIn"
+      style="-webkit-animation-duration: 1s;"
       >
       <!-- RIGHT COLUMN CONTAINER: Profile + Work + Education -->
       <div class="rightContainer bg-color-1" style="padding-left: 40px; padding-right: 40px;">
@@ -107,9 +107,5 @@ export default class PageIndex extends Vue {
       max-width: 700px;
       justify-content: flex-start;
     }
-  }
-
-  .anim-slow {
-    -webkit-animation-duration: 1s;
   }
 </style>
