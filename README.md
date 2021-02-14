@@ -4,7 +4,7 @@ Vue.js:n harjoittelua [portfoliosivuston](https://tikibeni.github.io/vuetreeni/#
 
 Todo:
 
-- Jatkokehityksenä Projects-täbi, johon esittelyä tehdyistä prokkiksista
+- Projects-täbi, johon esittelyä tehdyistä prokkiksista
 
 Apua HTML/CSS-suunnitteluun:
 
